@@ -1,0 +1,88 @@
+# status
+
+starting to become useful.  the library interface will probably
+change.
+
+
+# intro
+
+the library textmangle parses readable utf-8 ascii text and distills
+block-level layout information from it.  it can then convert it to
+either text, html (with or without keeping original formatting),
+latex or troff (ms).  there is no code yet for parsing inline layout
+information, it may be added in the future.
+
+the syntax is inspired by markdown, restructured text, etc.
+
+the following layout information can be found in a document:
+
+headers
+	starting with a ``#'', multiple such hashes can be specified,
+	causing deeper levels of headings.
+quoted text
+	just indented text.  handled the same as normal text, except
+	that headers are treated as normal text.
+list
+	a listing.  items start with either ``- '', ``* '' or ``• ''.
+	multi-line text can be created by starting second and later
+	lines with two spaces.  complexer structures can be created
+	by indenting text after the first (single- or multiline)
+	element.
+description
+	lists one-line titles, and then their descriptions.  the
+	title can only be one line long.  the description follows
+	immediately, as indented text.  just like with lists, complex
+	constructures can be create.
+paragraph
+	just a paragraph of text
+sequence
+	sequence of constructs, with each construct being one of
+	the above.
+
+this file is valid textmangle-syntax.
+
+
+# download
+
+the homepage of this software is at
+
+	http://www.ueber.net/repo/r/textmangle
+
+on that page, commands to clone the repository can be found, and a link
+to the latest .tgz.
+
+
+# install
+
+first make a file "mkconfig" similar to your inferno's installation
+mkconfig (symlink/bind it).  now type "mk install" to install the
+module declaration and compile and install.
+
+
+# run
+
+the program "mangletext" uses the library to parse text and output
+in one of the formats.  see the program's usage for help.  the
+program is a simple example of how to use the library.  the library
+has output generating functions (they are small).
+
+
+# licence & author
+
+this code is in the public domain.  the code is written by mechiel
+lukkien, reachable at mechiel@xs4all.nl or mechiel@ueber.net.
+
+
+# todo
+
+- test more, find more corner cases.  the text output sometimes
+  generates too many trailing newlines for indented text.
+- more fully implement & test latex and troff output
+- make textmangle recognize enumerations/ordered lists?
+- implement inline markup?
+- inline syntax:
+	* automatic urls?
+	* inline html/troff/latex/text?
+	* bold, italic, monospace
+	* need "verbatim" quote/indent?
+- write manual page?

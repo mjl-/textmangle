@@ -1,0 +1,9 @@
+<../mkconfig
+
+MODS=\
+	textmangle.m\
+
+<mkmod
+
+nuke:QV:
+	

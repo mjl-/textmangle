@@ -1,0 +1,17 @@
+<../../mkconfig
+
+TARG=\
+	textmangle.dis\
+
+MODULES=\
+
+SYSMODULES=\
+	textmangle.m\
+	lists.m\
+	string.m\
+	sys.m\
+	
+
+DISBIN=$ROOT/dis/lib
+
+<$ROOT/mkfiles/mkdis

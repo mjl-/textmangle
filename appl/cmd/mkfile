@@ -1,0 +1,17 @@
+<../../mkconfig
+
+TARG=\
+	mangletext.dis\
+
+SYSMODULES=\
+	textmangle.m\
+	arg.m\
+	bufio.m\
+	draw.m\
+	lists.m\
+	string.m\
+	sys.m\
+
+DISBIN=$ROOT/dis
+
+<$ROOT/mkfiles/mkdis
