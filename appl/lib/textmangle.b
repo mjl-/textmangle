@@ -376,7 +376,9 @@ tohtml0(mm: ref Mark, inline, pre: int): string
 		
 		if(inline)
 			return s;
-		return sprint("<p>\n%s</p>\n", s);
+		if(!pre)
+			s = sprint("<p>\n%s</p>\n", s);
+		return s;
 	List => 
 		s := "<ul>\n";
 		for(l := m.l; l != nil; l = tl l)
