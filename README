@@ -46,7 +46,7 @@ this file is valid textmangle-syntax.
 
 the homepage of this software is at
 
-	http://www.ueber.net/repo/r/textmangle
+	http://www.ueber.net/code/r/textmangle
 
 on that page, commands to clone the repository can be found, and a link
 to the latest .tgz.
@@ -75,10 +75,16 @@ lukkien, reachable at mechiel@xs4all.nl or mechiel@ueber.net.
 
 # todo
 
+- understand lists in middle of text?  so we don't require a newline
+  before a list?
+- indented paragraphs in normal text should be seen as quoted text,
+  or an example (code).  for lists & descriptions, they should be
+  handled like normal text.
 - test more, find more corner cases.  the text output sometimes
   generates too many trailing newlines for indented text.
 - more fully implement & test latex and troff output
 - make textmangle recognize enumerations/ordered lists?
+- understand some form of quoted text, where no markup is interpreted.
 - implement inline markup?
 - inline syntax:
 	* automatic urls?
@@ -86,3 +92,4 @@ lukkien, reachable at mechiel@xs4all.nl or mechiel@ueber.net.
 	* bold, italic, monospace
 	* need "verbatim" quote/indent?
 - write manual page?
+- try to conform a bit more with markdown.  to make transitions easier.
