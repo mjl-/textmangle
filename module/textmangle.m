@@ -1,4 +1,5 @@
-Textmangle: module {
+Textmangle: module
+{
 	PATH:	con "/dis/lib/textmangle.dis";
 
 	dflag:	int;

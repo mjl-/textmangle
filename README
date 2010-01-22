@@ -44,19 +44,18 @@ this file is valid textmangle-syntax.
 
 # download
 
-the homepage of this software is at
+get the latest version at:
 
 	http://www.ueber.net/code/r/textmangle
-
-on that page, commands to clone the repository can be found, and a link
-to the latest .tgz.
 
 
 # install
 
-first make a file "mkconfig" similar to your inferno's installation
-mkconfig (symlink/bind it).  now type "mk install" to install the
-module declaration and compile and install.
+make sure you have $ROOT set, now "mk install" to compile and install
+the files.
+
+when building from within inferno, insert SYSHOST=Inferno and ROOT=
+in the mk invocations to override the values in the mkconfig.
 
 
 # run
